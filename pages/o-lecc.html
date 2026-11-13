@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LECC - UnB</title>
+    <!-- Links para os estilos -->
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/componentes.css">
+</head>
+<body>
+
+    <!-- Topbar Apoiadores -->
+    <section class="topbar-apoiadores">
+        <p>Apoiadores do Laboratório: <span>DEG/DEX - Licenciaturas em Movimento em Rede</span> | <span>UnB</span></p>
+    </section>
+
+    <!-- Header com Logo à esquerda e Menu à direita -->
+    <header class="header-principal">
+        <div class="header-wrapper">
+            <!-- Espaço do Logo do LECC -->
+            <a href="../index.html" class="logo-lecc">
+                <img src="../assets/icons/icon-lecc.png" alt="Logo LECC" class="logo-img">
+            </a>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index.html" class="nav-link">Início</a></li>
+                    
+                    <li class="dropdown">
+                        <button class="dropdown-btn" onclick="toggleDropdown('drop-acervo', event)">Acervo ▾</button>
+                        <ul class="dropdown-content" id="drop-acervo">
+                            <li><a href="acervo.html">Como Funciona?</a></li>
+                            <li><a href="jogos.html">Jogos</a></li>
+                            <li><a href="livros.html">Livros</a></li>
+                            <li><a href="modelos-didaticos.html">Modelos Didáticos</a></li>
+                            <li><a href="propostas-didaticas.html">Propostas Didáticas</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <button class="dropdown-btn" onclick="toggleDropdown('drop-acoes', event)">Ações ▾</button>
+                        <ul class="dropdown-content" id="drop-acoes">
+                            <li><a href="noite-jogos.html">Noite de Jogos</a></li>
+                            <li><a href="leituras-lecc.html">Leituras LECC</a></li>
+                            <li><a href="projetos-extensao.html">Projetos de Extensão</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="o-lecc.html" class="nav-link">O LECC</a></li>
+                    <li><a href="equipe.html" class="nav-link">Nossa Equipe</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container-principal">
+        
+        <section class="hero" style="min-height: auto; margin-bottom: 4rem;">
+            <h1>Sobre o LECC</h1>
+            <p>Um espaço de integração entre Universidade, Escola e Comunidade, dedicado ao avanço do ensino de Biologia e Ciências Naturais.</p>
+        </section>
+
+        <section class="apresentacao">
+            <div class="texto-apresentacao">
+                <center><h1>Idealização e Objetivos</h1></center>
+                <br>
+                <p>O Curso de Licenciatura em Ciências Biológicas da Universidade de Brasília (UnB) 
+                    tem como diretriz norteadora a formação de alto nível do licenciado em Ciências Biológicas, 
+                    alicerçada numa sólida fundamentação teórica nas dimensões históricas, filosóficas, 
+                    psicológicas, políticas e didático-pedagógica, essenciais ao exercício da profissão, 
+                    articulada à formação decorrente da vivência de atividades práticas.</p>
+
+                <p>Considerando as questões apresentadas, foi criado um Laboratório de Ensino de Ciências e 
+                    Cultura (LECC) dentro do NECBio/IB, visando atender, principalmente, às necessidades dos 
+                    nossos Licenciandos. Assim o LECC iniciou suas atividades no início de 2011, tendo como 
+                    principal objetivo dar subsídios para a formação dos licenciandos em Ciências Biológicas, 
+                    sobretudo no período em que estão cursando as disciplinas específicas da licenciatura.</p> 
+
+                <p>Atualmente O Laboratório também tem os objetivos de promover atividades que contribuíssem 
+                    para discussões a respeito do ensino-aprendizagem de Ciências Naturais e Biologia e 
+                    favorecer a elaboração de projetos inter e multidisciplinares, além de incentivar e 
+                    promover atividades Culturais.</p>
+
+                <p>Por Mariana Zancul</p>
+
+            </div>
+            
+            <div style="flex: 1; text-align: right;">
+                <img src="../assets/imagens-lab/equipe01.jpg" alt="Espaço físico do LECC" class="imagem-simples">
+            </div>
+        </section>
+
+        <section class="secao-cards">
+            <h2 class="titulo-secao">Nossos Pilares</h2>
+            <div class="cards-carrossel">
+                <div class="cards-view">
+                    <div class="cards-container" id="slider-cards">
+                        <article class="card">
+                            <div class="card-conteudo">
+                                <h2 style="text-align: center">Missão</h2>
+                                <p style="font-size:1.2rem">Promover a excelência na formação docente inicial e continuada, integrando pesquisa, ensino e extensão no contexto das Ciências e Biologia.</p>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <div class="card-conteudo">
+                                <h2 style="text-align: center">Visão</h2>
+                                <p style="font-size:1.2rem">Ser um polo de referência na Universidade no desenvolvimento de metodologias e materiais didáticos inovadores e acessíveis.</p>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <div class="card-conteudo">
+                                <h2 style="text-align: center">Valores</h2>
+                                <p style="font-size:1.2rem">Defesa da educação pública, pensamento crítico, inclusão social, inovação pedagógica e a valorização contínua da cultura.</p>
+                             </div>
+                        </article>
+                      </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape-principal">
+        <div class="rodape-container">      
+            <div class="rodape-icones">
+                <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=lecunb.necbio@gmail.com" aria-label="E-mail" class="icone-link">
+                    <img src="../assets/icons/email-icon.png" alt="E-mail do LECC">
+                </a>
+
+                <a href="https://necbio.unb.br/" aria-label="Localização" class="icone-link">
+                    <img src="../assets/icons/icon-ecbio-unb.png" alt="Localização do LECC">
+                </a>
+
+                <a href="https://www.instagram.com/p/DJuRSggRWqI/" aria-label="Instagram" class="icone-link">
+                    <img src="../assets/icons/insta-icon.png" alt="Instagram do LECC">
+                </a>
+            </div>
+
+            <div class="rodape-texto">
+                <p class="sep-line"></p>
+                <p><strong>Laboratório de Ensino de Ciências e Cultura (LECC)</strong></p>
+                <p>NECBio - Instituto de Ciências Biológicas, Universidade de Brasília (UnB), Campus Darcy Ribeiro (DF)</p>
+                <br>
+                <p>por Beatriz Flores | Amanda Lima | Artur Stange</p>
+                <p class="sep-line">© 2026 LECC - UnB. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/global.js"></script>
+    <script src="../js/animacoes.js"></script>
+
+
+</body>
+</html>

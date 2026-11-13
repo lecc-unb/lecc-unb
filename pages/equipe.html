@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LECC - UnB</title>
+    <!-- Links para os estilos -->
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/componentes.css">
+</head>
+<body>
+
+    <!-- Topbar Apoiadores -->
+    <section class="topbar-apoiadores">
+        <p>Apoiadores do Laboratório: <span>DEG/DEX - Licenciaturas em Movimento em Rede</span> | <span>UnB</span></p>
+    </section>
+
+    <!-- Header com Logo à esquerda e Menu à direita -->
+    <header class="header-principal">
+        <div class="header-wrapper">
+            <!-- Espaço do Logo do LECC -->
+            <a href="../index.html" class="logo-lecc">
+                <img src="../assets/icons/icon-lecc.png" alt="Logo LECC" class="logo-img">
+            </a>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index.html" class="nav-link">Início</a></li>
+                    
+                    <li class="dropdown">
+                        <button class="dropdown-btn" onclick="toggleDropdown('drop-acervo', event)">Acervo ▾</button>
+                        <ul class="dropdown-content" id="drop-acervo">
+                            <li><a href="acervo.html">Como Funciona?</a></li>
+                            <li><a href="jogos.html">Jogos</a></li>
+                            <li><a href="livros.html">Livros</a></li>
+                            <li><a href="modelos-didaticos.html">Modelos Didáticos</a></li>
+                            <li><a href="propostas-didaticas.html">Propostas Didáticas</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <button class="dropdown-btn" onclick="toggleDropdown('drop-acoes', event)">Ações ▾</button>
+                        <ul class="dropdown-content" id="drop-acoes">
+                            <li><a href="noite-jogos.html">Noite de Jogos</a></li>
+                            <li><a href="leituras-lecc.html">Leituras LECC</a></li>
+                            <li><a href="projetos-extensao.html">Projetos de Extensão</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="o-lecc.html" class="nav-link">O LECC</a></li>
+                    <li><a href="equipe.html" class="nav-link">Nossa Equipe</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container-principal">
+        <section class="hero" style="min-height: auto; margin-bottom: 2rem;">
+            <h1>Conheça Nossa Equipe!</h1>
+            <p>Nosso espaço e acervo está sob curadoria de graduandos de Licenciatura em Biologia e do corpo 
+                docente do NECBio.
+            </p>
+            <p>Conheça nossos extensionistas e monitores!</p>
+        </section>
+
+        <section class="secao-equipe">
+            <div class="grid-equipe">
+                
+                <article class="card-equipe">
+                    <img src="../assets/equipe/amanda-brito-foto.jpg" alt="Foto do Membro 1" class="foto-equipe">
+                    <h3 class="nome-equipe">Amanda Brito</h3>
+                    <span class="cargo-equipe">Coordenador / Professor</span>
+                    <p class="bio-equipe">Tenho 25 anos e curso Licenciatura em Biologia. Tenho muito interesse nas áreas de Entomologia e educação. Já fiz parte de alguns projetos de extensão e monitorias e atualmente estou na Endêmica (empresa jr) e estagiando. Se precisarem de mim, estarei no LEC para ajudar vocês!</p>
+                </article>
+
+                <article class="card-equipe">
+                    <img src="../assets/equipe/amanda-lima-foto.jpg" alt="Foto do Membro 2" class="foto-equipe">
+                    <h3 class="nome-equipe">Amanda Lima</h3>
+                    <span class="cargo-equipe">Pesquisadora</span>
+                    <p class="bio-equipe">Oiii! Meu nome é Amanda Lima, estou no sétimo semestre da licenciatura em Ciências Biológicas. Atualmente faço parte do LabCripto, onde atuo principalmente com biologia molecular. Também sou monitora do Anki em Anatomia Animal e participo das atividades do LACV. Tenho uma grande paixão por ensinar e por compartilhar o que aprendo ao longo da minha formação.</p>
+                </article>
+
+                <article class="card-equipe">
+                    <img src="../assets/equipe/ana-julia-foto.jpg" alt="Foto do Membro 3" class="foto-equipe">
+                    <h3 class="nome-equipe">Ana Júlia</h3>
+                    <span class="cargo-equipe">Bolsista de Extensão</span>
+                    <p class="bio-equipe">Tenho 24 anos, estou no 11º período de licenciatura. Gosto muito das áreas de microbiologia, evolução e zoologia, além da educação. Atualmente estagio no laboratório de micologia e já fiz parte do PIBID e da gestão do CABio. Sou comunicativa, adoro conversar e gosto muito de ser monitora, então, se precisarem de mim,  estou aqui!</p>
+                </article>
+
+                <article class="card-equipe">
+                    <img src="../assets/equipe/beatri-flores-foto.jpg" alt="Foto do Membro" class="foto-equipe">
+                    <h3 class="nome-equipe">Beatriz Flores</h3>
+                    <span class="cargo-equipe">Iniciação Científica</span>
+                    <p class="bio-equipe">Tenho 22 anos e atualmente estou no 10º semestre de Licenciatura em Biologia. Já participei de gestões do CABio, fiz parte do PIBID e do Cerrado Visual. Hoje componho a Articulação de Comunicação da ENEBio, e atuo como professora de Ciências e Laboratório. Conheci o LEC ainda no 3ºsemestre, com a disciplina de Didática das Ciências Naturais. Me encantei pelo espaço e por todo seu potencial.</p>
+                </article>
+
+                <article class="card-equipe">
+                    <img src="../assets/equipe/joão-victor-foto.jpg" alt="Foto do Membro" class="foto-equipe">
+                    <h3 class="nome-equipe">João Victor</h3>
+                    <span class="cargo-equipe">Professor Colaborador</span>
+                    <p class="bio-equipe">Oii, eu sou o João, tenho 24 anos e estou no 8º semestre de Licenciatura em Biologia. Atualmente estou estagiando na área de Zoologia, mas meu maior interesse é na Educação. Conheci o LECC devido outra monitora e estou animado para contribuir com esse espaço!</p>
+                </article>
+
+                <article class="card-equipe">
+                    <img src="../assets/equipe/livia-neves-foto.jpg" alt="Foto do Membro" class="foto-equipe">
+                    <h3 class="nome-equipe">Lívia Neves</h3>
+                    <span class="cargo-equipe">Bolsista de Ensino</span>
+                    <p class="bio-equipe">Tenho 21 anos, estou no 8º semestre de Biologia - licenciatura e faço parte da Diretoria de Comunicação da A.A.A. Desnaturada. Tenho muito interesse em genética e na docência. Também curso pedagogia e, atualmente, trabalho com crianças em uma escola bilíngue. Adoro ensinar e não me imagino trabalhando em outra área.</p>
+                </article>
+
+                <article class="card-equipe">
+                    <img src="../assets/equipe/mariana-higa-foto.jpg" alt="Foto do Membro" class="foto-equipe">
+                    <h3 class="nome-equipe">Mariana Higa</h3>
+                    <span class="cargo-equipe">Desenvolvedor / TI</span>
+                    <p class="bio-equipe">Tenho 26 primaveras. Sou bióloga e estou cursando licenciatura em algum semestre dessa UnB. Gosto muito de fisiologia, zoologia e educação. Já estive em alguns projetos de divulgação científica e me identifico muito com a área. Atualmente faço parte do PIBID e adoro ajudar os outros. Sempre que precisarem, podem me dar um "oi" lá no LEC!</p>
+                </article>
+
+                <article class="card-equipe">
+                    <img src="../assets/equipe/mariana-reis-foto.jpg" alt="Foto do Membro" class="foto-equipe">
+                    <h3 class="nome-equipe">Mariana Reis</h3>
+                    <span class="cargo-equipe">Pesquisadora de Pós-Doc</span>
+                    <p class="bio-equipe">Oie, sou a Mari Reis, muito prazer! Estou no 9° Semestre de Biologia (Licenciatura) e trabalho com plantinhas (musgos) no LabCripto, além de fazer parte do projeto de extensão do Jardim Louise Ribeiro, atuando no GT Extensão e Ensino e agora também faço parte do LEC!!! Quando não me encontrar nesses três lugares pode ter certeza que estarei ou me aventurando em campo, algum esporte ou dando a maior gargalhada com algum amigo!!!!</p>
+                </article>
+
+                <article class="card-equipe">
+                    <img src="../assets/equipe/paulo-neres-foto.jpg" alt="Foto do Membro" class="foto-equipe">
+                    <h3 class="nome-equipe">Paulo Neres</h3>
+                    <span class="cargo-equipe">Estagiário</span>
+                    <p class="bio-equipe">Olá, meu nome é Paulo Neres. Sou Professor Biólogo da SEE/DF, formado pela UnB, aluno de Biologia Bacharelado e pesquisador no Instituto Brasília Ambiental. Durante a graduação sempre fui apaixonado pela educação e sei que essa é minha vocação, trabalhei com diversas disciplinas de educação em ciências. Atualmente atuo na Coordenação de Extensão do IB, como apoio/suporte. Também faço parte do CineBio UnB, projeto esse criado por mim e mais duas mulheres cientistas.</p>
+                </article>
+
+            </div>
+        </section>
+    </main>
+    
+    <footer class="rodape-principal">
+        <div class="rodape-container">      
+            <div class="rodape-icones">
+                <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=lecunb.necbio@gmail.com" aria-label="E-mail" class="icone-link">
+                    <img src="../assets/icons/email-icon.png" alt="E-mail do LECC">
+                </a>
+
+                <a href="https://necbio.unb.br/" aria-label="Localização" class="icone-link">
+                    <img src="../assets/icons/icon-ecbio-unb.png" alt="Localização do LECC">
+                </a>
+
+                <a href="https://www.instagram.com/p/DJuRSggRWqI/" aria-label="Instagram" class="icone-link">
+                    <img src="../assets/icons/insta-icon.png" alt="Instagram do LECC">
+                </a>
+            </div>
+
+            <div class="rodape-texto">
+                <p class="sep-line"></p>
+                <p><strong>Laboratório de Ensino de Ciências e Cultura (LECC)</strong></p>
+                <p>NECBio - Instituto de Ciências Biológicas, Universidade de Brasília (UnB), Campus Darcy Ribeiro (DF)</p>
+                <br>
+                <p>por Beatriz Flores | Amanda Lima | Artur Stange</p>
+                <p class="sep-line">© 2026 LECC - UnB. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/global.js"></script>
+    <script src="../js/animacoes.js"></script>
+
+
+</body>
+</html>

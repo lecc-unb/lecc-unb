@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LECC - UnB</title>
+    <!-- Links para os estilos -->
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/componentes.css">
+</head>
+<body>
+
+    <!-- Topbar Apoiadores -->
+    <section class="topbar-apoiadores">
+        <p>Apoiadores do Laboratório: <span>DEG/DEX - Licenciaturas em Movimento em Rede</span> | <span>UnB</span></p>
+    </section>
+
+    <!-- Header com Logo à esquerda e Menu à direita -->
+    <header class="header-principal">
+        <div class="header-wrapper">
+            <!-- Espaço do Logo do LECC -->
+            <a href="../index.html" class="logo-lecc">
+                <img src="../assets/icons/icon-lecc.png" alt="Logo LECC" class="logo-img">
+            </a>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index.html" class="nav-link">Início</a></li>
+                    
+                    <li class="dropdown">
+                        <button class="dropdown-btn" onclick="toggleDropdown('drop-acervo', event)">Acervo ▾</button>
+                        <ul class="dropdown-content" id="drop-acervo">
+                            <li><a href="acervo.html">Como Funciona?</a></li>
+                            <li><a href="jogos.html">Jogos</a></li>
+                            <li><a href="livros.html">Livros</a></li>
+                            <li><a href="modelos-didaticos.html">Modelos Didáticos</a></li>
+                            <li><a href="propostas-didaticas.html">Propostas Didáticas</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <button class="dropdown-btn" onclick="toggleDropdown('drop-acoes', event)">Ações ▾</button>
+                        <ul class="dropdown-content" id="drop-acoes">
+                            <li><a href="noite-jogos.html">Noite de Jogos</a></li>
+                            <li><a href="leituras-lecc.html">Leituras LECC</a></li>
+                            <li><a href="projetos-extensao.html">Projetos de Extensão</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="o-lecc.html" class="nav-link">O LECC</a></li>
+                    <li><a href="equipe.html" class="nav-link">Nossa Equipe</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="secao-livros">
+            <section class="hero" style="min-height: auto; margin-bottom: 4rem;">
+                <h1 class="titulo-secao" style="text-align: center;">Acervo de Livros</h1>
+            </section>
+
+            <div class="container-pesquisa">
+            <input type="text" id="input-pesquisa" class="barra-pesquisa" placeholder="Pesquise por título ou autor...">
+            </div>
+
+            <div class="grid-livros">
+                <article class="card-livro">
+                    <img src="../assets/livros/contosrecolhidos.jpg" alt="Capa do Livro 1" class="capa-livro">
+                    <div class="conteudo-livro">
+                        <h3>Contos Recolhidos</h3>
+                        <p>Autor ou breve descrição sobre o conteúdo do livro.</p>
+                    </div>
+                </article>
+
+                <article class="card-livro">
+                    <img src="../assets/livros/pesiagalera.jpg" alt="Capa do Livro 2" class="capa-livro">
+                    <div class="conteudo-livro">
+                        <h3>Poesia, galera!</h3>
+                        <p>Autor ou breve descrição sobre o conteúdo do livro.</p>
+                    </div>
+                </article>
+
+                <article class="card-livro">
+                    <img src="../assets/livros/ilhadasarvoresperdidas.jpg" alt="Capa do Livro 3" class="capa-livro">
+                    <div class="conteudo-livro">
+                        <h3>A ilha das árvores perdidas</h3>
+                        <p>Autor ou breve descrição sobre o conteúdo do livro.</p>
+                    </div>
+                </article>
+
+                <article class="card-livro">
+                    <img src="../assets/livros/amaldicaodomar.jpg" alt="Capa do Livro 1" class="capa-livro">
+                    <div class="conteudo-livro">
+                        <h3>A maldição do mar</h3>
+                        <p>Autor ou breve descrição sobre o conteúdo do livro.</p>
+                    </div>
+                </article>
+
+                <article class="card-livro">
+                    <img src="../assets/livros/mentirosos.jpg" alt="Capa do Livro 2" class="capa-livro">
+                    <div class="conteudo-livro">
+                        <h3>Mentirosos</h3>
+                        <p>Autor ou breve descrição sobre o conteúdo do livro.</p>
+                    </div>
+                </article>
+
+                <article class="card-livro">
+                    <img src="../assets/livros/alendadomeninolambari.jpg" alt="Capa do Livro 3" class="capa-livro">
+                    <div class="conteudo-livro">
+                        <h3>A lenda do menino lambari</h3>
+                        <p>Autor ou breve descrição sobre o conteúdo do livro.</p>
+                    </div>
+        </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape-principal">
+        <div class="rodape-container">      
+            <div class="rodape-icones">
+                <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=lecunb.necbio@gmail.com" aria-label="E-mail" class="icone-link">
+                    <img src="../assets/icons/email-icon.png" alt="E-mail do LECC">
+                </a>
+
+                <a href="https://necbio.unb.br/" aria-label="Localização" class="icone-link">
+                    <img src="../assets/icons/icon-ecbio-unb.png" alt="Localização do LECC">
+                </a>
+
+                <a href="https://www.instagram.com/p/DJuRSggRWqI/" aria-label="Instagram" class="icone-link">
+                    <img src="../assets/icons/insta-icon.png" alt="Instagram do LECC">
+                </a>
+            </div>
+
+            <div class="rodape-texto">
+                <p class="sep-line"></p>
+                <p><strong>Laboratório de Ensino de Ciências e Cultura (LECC)</strong></p>
+                <p>NECBio - Instituto de Ciências Biológicas, Universidade de Brasília (UnB), Campus Darcy Ribeiro (DF)</p>
+                <br>
+                <p>por Beatriz Flores | Amanda Lima | Artur Stange</p>
+                <p class="sep-line">© 2026 LECC - UnB. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/global.js"></script>
+    <script src="../js/animacoes.js"></script>
+
+
+</body>
+</html>

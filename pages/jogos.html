@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LECC - UnB</title>
+    <!-- Links para os estilos -->
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/componentes.css">
+</head>
+
+<body>
+        <!-- Topbar Apoiadores -->
+    <section class="topbar-apoiadores">
+        <p>Apoiadores do Laboratório: <span>DEG/DEX - Licenciaturas em Movimento em Rede</span> | <span>UnB</span></p>
+    </section>
+
+    <!-- Header com Logo à esquerda e Menu à direita -->
+    <header class="header-principal">
+        <div class="header-wrapper">
+            <!-- Espaço do Logo do LECC -->
+            <a href="../index.html" class="logo-lecc">
+                <img src="../assets/icons/icon-lecc.png" alt="Logo LECC" class="logo-img">
+            </a>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index.html" class="nav-link">Início</a></li>
+                    
+                    <li class="dropdown">
+                        <button class="dropdown-btn" onclick="toggleDropdown('drop-acervo', event)">Acervo ▾</button>
+                        <ul class="dropdown-content" id="drop-acervo">
+                            <li><a href="acervo.html">Como Funciona?</a></li>
+                            <li><a href="jogos.html">Jogos</a></li>
+                            <li><a href="livros.html">Livros</a></li>
+                            <li><a href="modelos-didaticos.html">Modelos Didáticos</a></li>
+                            <li><a href="propostas-didaticas.html">Propostas Didáticas</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <button class="dropdown-btn" onclick="toggleDropdown('drop-acoes', event)">Ações ▾</button>
+                        <ul class="dropdown-content" id="drop-acoes">
+                            <li><a href="noite-jogos.html">Noite de Jogos</a></li>
+                            <li><a href="leituras-lecc.html">Leituras LECC</a></li>
+                            <li><a href="projetos-extensao.html">Projetos de Extensão</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="o-lecc.html" class="nav-link">O LECC</a></li>
+                    <li><a href="equipe.html" class="nav-link">Nossa Equipe</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container-principal">
+        <section class="hero" style="min-height: auto; margin-bottom: 4rem;">
+            <h1>Nossos Jogos!</h1>
+            <p>
+                Veja todos nossos jogos interativos de diversas áreas do ensino de Biologia!
+            </p>
+        </section>
+
+        <section class="secao-cards">
+            <h1>Zoologia</h1>
+            <div class="cards-carrossel">
+                <button class="seta-slider  btn-voltar"></button>
+                <div class="cards-view">
+                    <div class="cards-container">
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/zoologia/reptilimania.jpg">
+                            <div class="card-conteudo">
+                                <h3>Reptilimania</h3>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/zoologia/bicodasaves.jpg">
+                            <div class="card-conteudo">
+                                <h3>Bico das Aves</h3>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/zoologia/jogodosseteerrosinsetos.jpg">
+                            <div class="card-conteudo">
+                                <h3>Jogo dos 7 erros Insetos</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/zoologia/dominodezoologia.jpg">
+                            <div class="card-conteudo">
+                                <h3>Domino de Zoologia</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/zoologia/continuanadar.jpg">
+                            <div class="card-conteudo">
+                                <h3>Continue a Nadar!</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/zoologia/jogodamemoriaequemsoueuinsetos.jpg">
+                            <div class="card-conteudo">
+                                <h3>Quem sou eu Insetos</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/zoologia/herpetoperfil.jpg">
+                            <div class="card-conteudo">
+                                <h3>Herpeto Perfil</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/zoologia/queartropodesoueu.jpg">
+                            <div class="card-conteudo">
+                                <h3>Que Artrópode sou eu?</h3>
+                             </div>
+                        </article>
+                    </div>
+                </div>
+                <button class="seta-slider btn-avancar"></button>
+            </div>
+        </section>
+
+        <section class="secao-cards">
+            <h1>Ecologia</h1>
+            <div class="cards-carrossel">
+                <button class="seta-slider btn-voltar"></button>
+                <div class="cards-view">
+                    <div class="cards-container">
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/ecologia/jogodamemoriarelaçõesecológicas.jpg">
+                            <div class="card-conteudo">
+                                <h3>Jogo da Memória - Relações Ecológicas</h3>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/ecologia/trilharadicalverde.jpg">
+                            <div class="card-conteudo">
+                                <h3>Trilha Radical Verde</h3>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/ecologia/vidaemacao.jpg">
+                            <div class="card-conteudo">
+                                <h3>Vida em Ação</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/ecologia/supertrunfocerrado.jpg">
+                            <div class="card-conteudo">
+                                <h3>Super Trunfo Cerrado</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/ecologia/jogodosreinos.jpg">
+                            <div class="card-conteudo">
+                                <h3>Jogos dos Reinos</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/ecologia/rio+20+21+22+23.jpg">
+                            <div class="card-conteudo">
+                                <h3>Rio +20 +21 +22 +23</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/ecologia/supertrunfocerradoibama.jpg">
+                            <div class="card-conteudo">
+                                <h3>Super Trunfo Cerrado-Ibama</h3>
+                             </div>
+                        </article>
+                    </div>
+                </div>
+                <button class="seta-slider btn-avancar"></button>
+            </div>
+        </section>
+
+        <section class="secao-cards">
+            <h1>Botânica</h1>
+            <div class="cards-carrossel">
+                <button class="seta-slider  btn-voltar"></button>
+                <div class="cards-view">
+                    <div class="cards-container">
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/botânica/polineeze.jpg">
+                            <div class="card-conteudo">
+                                <h3>Polineeze</h3>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/botânica/jogodidatica.jpg">
+                            <div class="card-conteudo">
+                                <h3>Jogo Didática</h3>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/botânica/cerradoemmaos-jrl.jpg">
+                            <div class="card-conteudo">
+                                <h3>Cerrado em Mãos - JRL</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/botânica/disputadabotanica.jpg">
+                            <div class="card-conteudo">
+                                <h3>Disputa da Botânica</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/botânica/imagemeacao-cerradovisual.jpg">
+                            <div class="card-conteudo">
+                                <h3>Imagem e Ação - Cerrado Visual</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/botânica/perfil-cerradovisual.jpg">
+                            <div class="card-conteudo">
+                                <h3>Perfil - Cerrado Visual</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/botânica/queorganismosoueu_cerradovisual.jpg">
+                            <div class="card-conteudo">
+                                <h3>Que organismo sou eu? Cerrado Visual</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/botânica/jogodamemoria-cerradovisual.jpg">
+                            <div class="card-conteudo">
+                                <h3>Jogo da Memória - Cerrado Visual</h3>
+                             </div>
+                        </article>
+                    </div>
+                </div>
+                <button class="seta-slider btn-avancar"></button>
+            </div>
+        </section>
+
+        <section class="secao-cards">
+            <h1>Genética e Evolução</h1>
+            <div class="cards-carrossel">
+                <button class="seta-slider  btn-voltar"></button>
+                <div class="cards-view">
+                    <div class="cards-container">
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/geneticaeevolucao/evoluindosaude.jpg">
+                            <div class="card-conteudo">
+                                <h3>Evoluindo Saúde</h3>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/geneticaeevolucao/evoluindogenetica.jpg">
+                            <div class="card-conteudo">
+                                <h3>Evoluindo Genética</h3>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/geneticaeevolucao/jogodosaberciencia.jpg">
+                            <div class="card-conteudo">
+                                <h3>Jogo do Saber Ciência</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/geneticaeevolucao/desvendandoagenetica.jpg">
+                            <div class="card-conteudo">
+                                <h3>Desvendando a Genética</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/geneticaeevolucao/duplasdodna.jpg">
+                            <div class="card-conteudo">
+                                <h3>Duplas do DNA</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/geneticaeevolucao/meufenótipofavorito.jpg">
+                            <div class="card-conteudo">
+                                <h3>Meu Fenótipo Favorito</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/geneticaeevolucao/rotasdaevolucao.jpg">
+                            <div class="card-conteudo">
+                                <h3>Rotas da Evolução</h3>
+                             </div>
+                        </article>
+                    </div>
+                </div>
+                <button class="seta-slider btn-avancar"></button>
+            </div>
+        </section>
+
+        <section class="secao-cards">
+            <h1>Saúde e Anatomia</h1>
+            <div class="cards-carrossel">
+                <button class="seta-slider  btn-voltar"></button>
+                <div class="cards-view">
+                    <div class="cards-container">
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/saudeeanatomia/dequemestoufalando.jpg">
+                            <div class="card-conteudo">
+                                <h3>De quem estou falando?</h3>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/saudeeanatomia/tabuleirocalamidade.png">
+                            <div class="card-conteudo">
+                                <h3>Tabuleiro Calamidade</h3>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/saudeeanatomia/higieneememoria.jpg">
+                            <div class="card-conteudo">
+                                <h3>Higiene e Memória</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/saudeeanatomia/vermeumjogodeinfecao.jpg">
+                            <div class="card-conteudo">
+                                <h3>Verme, um jogo de Infecção</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/saudeeanatomia/jogodosistemarespiratorio.jpg">
+                            <div class="card-conteudo">
+                                <h3>Jogo do Sistema Respiratório</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/saudeeanatomia/digestorioojogo.jpg">
+                            <div class="card-conteudo">
+                                <h3>Digestório o Jogo</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/saudeeanatomia/duoo.jpg">
+                            <div class="card-conteudo">
+                                <h3>Duoo</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/saudeeanatomia/bioquest.jpg">
+                            <div class="card-conteudo">
+                                <h3>Bio Quest</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/saudeeanatomia/bionervo.jpg">
+                            <div class="card-conteudo">
+                                <h3>Bio Nervo</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/saudeeanatomia/jogodosistemalocomotor.jpg">
+                            <div class="card-conteudo">
+                                <h3>Jogo do Sistema Locomotor</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/saudeeanatomia/jogodamemoriasistemadigestorio.jpg">
+                            <div class="card-conteudo">
+                                <h3>Jogo da memória-Sistema Digestório</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/saudeeanatomia/juntaquadra.jpg">
+                            <div class="card-conteudo">
+                                <h3>Junta Quadra</h3>
+                             </div>
+                        </article>
+                    </div>
+                </div>
+                <button class="seta-slider btn-avancar"></button>
+            </div>
+        </section>
+
+        <section class="secao-cards">
+            <h1>Citologia</h1>
+            <div class="cards-carrossel">
+                <button class="seta-slider  btn-voltar"></button>
+                <div class="cards-view">
+                    <div class="cards-container">
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/citologia/histogame.jpg">
+                            <div class="card-conteudo">
+                                <h3>Histogame</h3>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/citologia/imunosequencia.jpg">
+                            <div class="card-conteudo">
+                                <h3>Imunosequência</h3>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/citologia/jogodamemoriacelular.jpg">
+                            <div class="card-conteudo">
+                                <h3>Jogo da Memória Celular</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/citologia/perfilbio.jpg">
+                            <div class="card-conteudo">
+                                <h3>Perfil Bio</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/citologia/quemsoueu_anivelcelular.jpg">
+                            <div class="card-conteudo">
+                                <h3>Quem sou eu? Nível Celular</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/citologia/seresmicroscopicos-quensoueu.jpg">
+                            <div class="card-conteudo">
+                                <h3>Seres Microscópios-Quem sou eu?</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/citologia/seresmicroscopicos-jogodamemoria.jpg">
+                            <div class="card-conteudo">
+                                <h3>Jogo da Memória-Seres Microscópios</h3>
+                             </div>
+                        </article>
+                    </div>
+                </div>
+                <button class="seta-slider btn-avancar"></button>
+            </div>
+        </section>
+
+        <section class="secao-cards">
+            <h1>Outras Ciências</h1>
+            <div class="cards-carrossel">
+                <button class="seta-slider  btn-voltar"></button>
+                <div class="cards-view">
+                    <div class="cards-container">
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/outrasciencias/imagemeacaoatomico.jpg">
+                            <div class="card-conteudo">
+                                <h3>Imagem e Ação Atômico</h3>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/outrasciencias/quimicanotabuleiro.jpg">
+                            <div class="card-conteudo">
+                                <h3>Quimíca no Tabuleiro</h3>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/outrasciencias/jengamecanica.jpg">
+                            <div class="card-conteudo">
+                                <h3>Jenga Mecânica</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/outrasciencias/conectceincia.jpg">
+                            <div class="card-conteudo">
+                                <h3>Conectciência</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/outrasciencias/energiasrenovaveis.jpg">
+                            <div class="card-conteudo">
+                                <h3>Energias Renováveis</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/outrasciencias/supertrunfomaquinastermicas.jpg">
+                            <div class="card-conteudo">
+                                <h3>Super Trunfo-Máquinas Térmicas</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/outrasciencias/supertrunfo-sistemasolar.jpg">
+                            <div class="card-conteudo">
+                                <h3>Super Trunfo-Sistema Solar</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/outrasciencias/luzeimaginacao.jpg">
+                            <div class="card-conteudo">
+                                <h3>Luz e Imaginação</h3>
+                             </div>
+                        </article>
+                                                <article class="card">
+                            <img src="../assets/imagens-jogos/outrasciencias/dominosolar.jpg">
+                            <div class="card-conteudo">
+                                <h3>Dominó Solar</h3>
+                             </div>
+                        </article>
+
+                        <article class="card">
+                            <img src="../assets/imagens-jogos/outrasciencias/canastradasequacoes.jpg">
+                            <div class="card-conteudo">
+                                <h3>Canastra das Equações</h3>
+                             </div>
+                        </article>
+                    </div>
+                </div>
+                <button class="seta-slider btn-avancar"></button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape-principal">
+        <div class="rodape-container">      
+            <div class="rodape-icones">
+                <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=lecunb.necbio@gmail.com" aria-label="E-mail" class="icone-link">
+                    <img src="../assets/icons/email-icon.png" alt="E-mail do LECC">
+                </a>
+
+                <a href="https://necbio.unb.br/" aria-label="Localização" class="icone-link">
+                    <img src="../assets/icons/icon-ecbio-unb.png" alt="Localização do LECC">
+                </a>
+
+                <a href="https://www.instagram.com/p/DJuRSggRWqI/" aria-label="Instagram" class="icone-link">
+                    <img src="../assets/icons/insta-icon.png" alt="Instagram do LECC">
+                </a>
+            </div>
+
+            <div class="rodape-texto">
+                <p class="sep-line"></p>
+                <p><strong>Laboratório de Ensino de Ciências e Cultura (LECC)</strong></p>
+                <p>NECBio - Instituto de Ciências Biológicas, Universidade de Brasília (UnB), Campus Darcy Ribeiro (DF)</p>
+                <br>
+                <p>por Beatriz Flores | Amanda Lima | Artur Stange</p>
+                <p class="sep-line">© 2026 LECC - UnB. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/global.js"></script>
+    <script src="../js/animacoes.js"></script>
+
+</body>
+</html>
