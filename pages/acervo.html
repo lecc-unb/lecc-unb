@@ -1,127 +1,155 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Quicksand:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
-</style>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LECC - UnB</title>
-    <!-- Links para os estilos -->
+
+    <title>Como funciona o acervo | LECC - UnB</title>
+    <meta name="description" content="Regras de empréstimo do acervo do LECC: quem pode solicitar jogos, livros e modelos didáticos, como retirar e como devolver os materiais.">
+
+    <link rel="icon" href="../assets/icons/icon-lecc.webp" type="image/webp">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Como funciona o acervo | LECC - UnB">
+    <meta property="og:description" content="Como solicitar o empréstimo de jogos, livros e modelos didáticos do LECC.">
+    <meta property="og:image" content="https://lecc-unb.github.io/lecc-unb/assets/icons/icon-lecc.webp">
+    <meta property="og:url" content="https://lecc-unb.github.io/lecc-unb/pages/acervo.html">
+    <link rel="canonical" href="https://lecc-unb.github.io/lecc-unb/pages/acervo.html">
+    <meta property="og:locale" content="pt_BR">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&amp;family=Quicksand:wght@400;500;600;700&amp;display=swap">
+
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/componentes.css">
 </head>
 
 <body>
-        <!-- Topbar Apoiadores -->
-    <section class="topbar-apoiadores">
-        <p>Apoiadores do Laboratório: <span>DEG/DEX - Licenciaturas em Movimento em Rede</span> | <span>UnB</span></p>
-    </section>
+    <div id="site-header"></div>
+    <script src="../js/layout.js"></script>
 
-    <!-- Header com Logo à esquerda e Menu à direita -->
-    <header class="header-principal">
-        <div class="header-wrapper">
-            <!-- Espaço do Logo do LECC -->
-            <a href="../index.html" class="logo-lecc">
-                <img src="../assets/icons/icon-lecc.png" alt="Logo LECC" class="logo-img">
-            </a>
+    <noscript>
+        <nav class="nav-sem-js" aria-label="Navegação principal">
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="acervo.html">Acervo</a></li>
+                <li><a href="jogos.html">Jogos</a></li>
+                <li><a href="livros.html">Livros</a></li>
+                <li><a href="o-lecc.html">O LECC</a></li>
+                <li><a href="equipe.html">Nossa Equipe</a></li>
+            </ul>
+        </nav>
+    </noscript>
 
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="../index.html" class="nav-link">Início</a></li>
-                    
-                    <li class="dropdown">
-                        <button class="dropdown-btn" onclick="toggleDropdown('drop-acervo', event)">Acervo ▾</button>
-                        <ul class="dropdown-content" id="drop-acervo">
-                            <li><a href="acervo.html">Como Funciona?</a></li>
-                            <li><a href="jogos.html">Jogos</a></li>
-                            <li><a href="livros.html">Livros</a></li>
-                            <li><a href="modelos-didaticos.html">Modelos Didáticos</a></li>
-                            <li><a href="propostas-didaticas.html">Propostas Didáticas</a></li>
-                        </ul>
-                    </li>
+    <main id="conteudo">
 
-                    <li class="dropdown">
-                        <button class="dropdown-btn" onclick="toggleDropdown('drop-acoes', event)">Ações ▾</button>
-                        <ul class="dropdown-content" id="drop-acoes">
-                            <li><a href="noite-jogos.html">Noite de Jogos</a></li>
-                            <li><a href="leituras-lecc.html">Leituras LECC</a></li>
-                            <li><a href="projetos-extensao.html">Projetos de Extensão</a></li>
-                        </ul>
-                    </li>
-
-                    <li><a href="o-lecc.html" class="nav-link">O LECC</a></li>
-                    <li><a href="equipe.html" class="nav-link">Nossa Equipe</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main class="container-principal">       
-        <section class="hero" style="min-height: auto; margin-bottom: 4rem;">
+        <section class="container-principal hero">
+            <span class="sobretitulo">Acervo</span>
             <h1>Nosso acervo</h1>
             <p>
-                Nosso acervo é composto por recursos didáticos elaborados por estudantes e professores em 
-                disciplinas da graduação, além de materiais doados por projetos de pesquisa e extensão da 
-                Universidade de Brasília. Entre os recursos dispomos para empréstimo jogos, livros e modelos 
-                didáticos.
+                O acervo do LECC é composto por recursos didáticos elaborados por estudantes e
+                professores em disciplinas da graduação, além de materiais doados por projetos de
+                pesquisa e extensão da Universidade de Brasília. Para empréstimo, dispomos de
+                jogos, livros e modelos didáticos.
             </p>
-            <br>
-            <h2>O empréstimo:</h2>
-            <p>
-                Os materiais podem ser requiridos por meio do formulário, a depender da disponibilidade de 
-                empréstimo de cada um. Ao solicitar um empréstimo, a pessoa se torna responsável por manter a 
-                integridade física do material, bem como cumprir o prazo de devolução, uma vez que os recursos 
-                são de uso coletivo dos frequentadores do LECC.
-            </p>
-            <br>
-            <h3>Quem pode solicitar empréstimo?</h3>
-            <p>
-                Qualquer professor de Ciências ou Biologia, estudantes da UnB ou membros de projetos de 
-                extensão podem solicitar empréstimo de recursos didáticos disponíveis no LECC.
-            </p>
-            <br>
-            <h3>Retiradas e devolução de materiais</h3>
-            <p>
-                Os materiais emprestados devem ser retirados e devolvidos nos dias e horários de funcionamento 
-                do Laboratório, conforme escala de monitores disponível no site e no Instagram.
-            </p>
+            <div class="grupo-botoes">
+                <a class="btn-primario" href="jogos.html">Ver os jogos</a>
+                <a class="btn-secundario" href="livros.html">Ver os livros</a>
+            </div>
         </section>
+
+        <!-- ===== Etapas do empréstimo ===== -->
+        <section class="faixa">
+            <div class="secao" data-revelar>
+                <h2 class="titulo-secao titulo-secao--linha">O empréstimo em 4 etapas</h2>
+
+                <ol class="lista-etapas">
+                    <li>
+                        <h3>Escolha o material</h3>
+                        <p>Navegue pelo acervo de jogos, livros e modelos didáticos e anote o que precisa.</p>
+                    </li>
+                    <li>
+                        <h3>Faça a solicitação</h3>
+                        <p>Entre em contato com a equipe pelo e-mail do laboratório, informando o material e a data de uso.</p>
+                    </li>
+                    <li>
+                        <h3>Retire no laboratório</h3>
+                        <p>A retirada acontece no LECC, nos dias e horários de funcionamento, conforme a escala de monitores.</p>
+                    </li>
+                    <li>
+                        <h3>Devolva no prazo</h3>
+                        <p>Devolva o material no prazo combinado e no mesmo estado em que o recebeu.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ===== Perguntas frequentes ===== -->
+        <section class="secao" data-revelar>
+            <h2 class="titulo-secao titulo-secao--linha">Perguntas frequentes</h2>
+
+            <div class="faq">
+                <details open>
+                    <summary>Quem pode solicitar empréstimo?</summary>
+                    <p>
+                        Qualquer professor de Ciências ou Biologia, estudantes da UnB e membros de
+                        projetos de extensão podem solicitar o empréstimo dos recursos didáticos
+                        disponíveis no LECC.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Quais são as responsabilidades de quem pega um material?</summary>
+                    <p>
+                        Ao solicitar um empréstimo, a pessoa se torna responsável por manter a
+                        integridade física do material e por cumprir o prazo de devolução, uma vez
+                        que os recursos são de uso coletivo dos frequentadores do LECC.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Todos os materiais estão disponíveis para empréstimo?</summary>
+                    <p>
+                        Não necessariamente. A disponibilidade varia conforme o material e o período
+                        do semestre, já que alguns itens são usados em disciplinas. Consulte a equipe
+                        antes de contar com um recurso específico.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Quando posso retirar e devolver?</summary>
+                    <p>
+                        Nos dias e horários de funcionamento do laboratório, conforme a escala de
+                        monitores divulgada no Instagram do LECC e no quadro de horários exibido na
+                        página inicial.
+                    </p>
+                </details>
+            </div>
+        </section>
+
+        <!-- ===== Contato ===== -->
+        <section class="secao" data-revelar>
+            <div class="bloco-destaque">
+                <h2>Pronto para solicitar?</h2>
+                <p>
+                    Escreva para a equipe do LECC informando o material desejado, a finalidade e a
+                    data de uso. Respondemos pelo e-mail do laboratório.
+                </p>
+                <div class="grupo-botoes">
+                    <a class="btn-primario" href="mailto:lecunb.necbio@gmail.com?subject=Solicita%C3%A7%C3%A3o%20de%20empr%C3%A9stimo%20-%20LECC">
+                        Solicitar por e-mail
+                    </a>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer class="rodape-principal">
-        <div class="rodape-container">      
-            <div class="rodape-icones">
-                <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=lecunb.necbio@gmail.com" aria-label="E-mail" class="icone-link">
-                    <img src="../assets/icons/email-icon.png" alt="E-mail do LECC">
-                </a>
-
-                <a href="https://necbio.unb.br/" aria-label="Localização" class="icone-link">
-                    <img src="../assets/icons/icon-ecbio-unb.png" alt="Localização do LECC">
-                </a>
-
-                <a href="https://www.instagram.com/p/DJuRSggRWqI/" aria-label="Instagram" class="icone-link">
-                    <img src="../assets/icons/insta-icon.png" alt="Instagram do LECC">
-                </a>
-            </div>
-
-            <div class="rodape-texto">
-                <p class="sep-line"></p>
-                <p><strong>Laboratório de Ensino de Ciências e Cultura (LECC)</strong></p>
-                <p>NECBio - Instituto de Ciências Biológicas, Universidade de Brasília (UnB), Campus Darcy Ribeiro (DF)</p>
-                <br>
-                <p>por Beatriz Flores | Amanda Lima | Artur Stange</p>
-                <p class="sep-line">© 2026 LECC - UnB. Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
+    <div id="site-footer"></div>
 
     <script src="../js/global.js"></script>
     <script src="../js/animacoes.js"></script>
-
 </body>
+
 </html>

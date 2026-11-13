@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lecc-unb.github.io/lecc-unb/sitemap.xml

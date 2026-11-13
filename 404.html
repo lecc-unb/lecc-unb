@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Página não encontrada | LECC - UnB</title>
+    <meta name="description" content="A página procurada não existe no site do Laboratório de Ensino de Ciências e Cultura da UnB.">
+    <meta name="robots" content="noindex">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&amp;family=Quicksand:wght@500;700&amp;display=swap">
+
+    <!-- Esta página é propositalmente autossuficiente: o GitHub Pages a serve
+         em qualquer URL inexistente, de qualquer profundidade, e caminhos
+         relativos para css/ ou js/ quebrariam em /pages/algo-inexistente. -->
+    <style>
+        :root {
+            --verde-700: #1f5137;
+            --verde-500: #387b5b;
+            --verde-50: #d5e4d9;
+            --verde-25: #eaf2ec;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: Quicksand, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-weight: 500;
+            line-height: 1.65;
+            background-color: var(--verde-25);
+            color: #142c20;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 2rem 1rem;
+        }
+
+        main {
+            max-width: 560px;
+            text-align: center;
+        }
+
+        .icone {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 1.5rem;
+            display: grid;
+            place-items: center;
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 2rem;
+            color: var(--verde-700);
+            border-radius: 999px;
+            background-color: var(--verde-50);
+            border: 2px dashed var(--verde-500);
+        }
+
+        .sobretitulo {
+            display: inline-block;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--verde-500);
+            margin-bottom: 0.75rem;
+        }
+
+        h1 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: clamp(1.9rem, 1.4rem + 2.4vw, 2.75rem);
+            font-weight: 600;
+            line-height: 1.2;
+            color: var(--verde-700);
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: #4a6155;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 0.75rem 1.75rem;
+            border-radius: 999px;
+            font-weight: 700;
+            text-decoration: none;
+            background-color: var(--verde-500);
+            color: #fff;
+            border: 2px solid var(--verde-500);
+            transition: background-color 0.25s, transform 0.25s;
+        }
+
+        .btn:hover {
+            background-color: var(--verde-700);
+            border-color: var(--verde-700);
+            transform: translateY(-2px);
+        }
+
+        .btn:focus-visible {
+            outline: 3px solid var(--verde-700);
+            outline-offset: 3px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * { transition-duration: 0.01ms !important; }
+        }
+    </style>
+</head>
+
+<body>
+    <main id="conteudo">
+        <div class="icone" aria-hidden="true">?</div>
+        <span class="sobretitulo">Erro 404</span>
+        <h1>Página não encontrada</h1>
+        <p>
+            O endereço que você acessou não existe ou foi movido. Pode ter sido
+            um link antigo ou um endereço digitado com algum erro.
+        </p>
+        <a class="btn" id="link-inicio" href="/">Ir para a página inicial</a>
+    </main>
+
+    <script>
+        /* No GitHub Pages o site de um projeto fica em
+           usuario.github.io/repositorio/, entao a raiz nao e "/".
+           Este trecho descobre a raiz correta a partir da URL atual. */
+        (function () {
+            var link = document.getElementById('link-inicio');
+            var partes = window.location.pathname.split('/').filter(Boolean);
+            var ehGithubPages = /\.github\.io$/i.test(window.location.hostname);
+            link.href = (ehGithubPages && partes.length > 0) ? '/' + partes[0] + '/' : '/';
+        })();
+    </script>
+</body>
+
+</html>

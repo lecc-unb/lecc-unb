@@ -1,183 +1,171 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Quicksand:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
-</style>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LECC - UnB</title>
-    <!-- Links para os estilos -->
+
+    <title>LECC - UnB | Laboratório de Ensino de Ciências e Cultura</title>
+    <meta name="description" content="O LECC é um laboratório multidisciplinar do NECBio/IB na Universidade de Brasília que empresta jogos, livros e modelos didáticos para o ensino de Ciências e Biologia.">
+
+    <link rel="icon" href="assets/icons/icon-lecc.webp" type="image/webp">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="LECC - UnB | Laboratório de Ensino de Ciências e Cultura">
+    <meta property="og:description" content="Jogos, livros e modelos didáticos para a formação de licenciandos em Ciências Biológicas na UnB.">
+    <meta property="og:image" content="https://lecc-unb.github.io/lecc-unb/assets/icons/icon-lecc.webp">
+    <meta property="og:url" content="https://lecc-unb.github.io/lecc-unb/">
+    <link rel="canonical" href="https://lecc-unb.github.io/lecc-unb/">
+    <meta property="og:locale" content="pt_BR">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&amp;family=Quicksand:wght@400;500;600;700&amp;display=swap">
+
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/componentes.css">
 </head>
+
 <body>
+    <!-- Header e rodapé são montados por js/layout.js (fonte única do menu) -->
+    <div id="site-header"></div>
+    <script src="js/layout.js"></script>
 
-    <!-- Topbar Apoiadores -->
-    <section class="topbar-apoiadores">
-        <p>Apoiadores do Laboratório: <span>DEG/DEX - Licenciaturas em Movimento em Rede</span> | <span>UnB</span></p>
-    </section>
+    <noscript>
+        <nav class="nav-sem-js" aria-label="Navegação principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="pages/acervo.html">Acervo</a></li>
+                <li><a href="pages/jogos.html">Jogos</a></li>
+                <li><a href="pages/livros.html">Livros</a></li>
+                <li><a href="pages/o-lecc.html">O LECC</a></li>
+                <li><a href="pages/equipe.html">Nossa Equipe</a></li>
+            </ul>
+        </nav>
+    </noscript>
 
-    <!-- Header com Logo à esquerda e Menu à direita -->
-    <header class="header-principal">
-        <div class="header-wrapper">
-            <!-- Espaço do Logo do LECC -->
-            <a href="index.html" class="logo-lecc">
-                <img src="assets/icons/icon-lecc.png" alt="Logo LECC" class="logo-img">
-            </a>
+    <main id="conteudo">
 
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">Início</a></li>
-                    
-                    <li class="dropdown">
-                        <button class="dropdown-btn" onclick="toggleDropdown('drop-acervo', event)">Acervo ▾</button>
-                        <ul class="dropdown-content" id="drop-acervo">
-                            <li><a href="pages/acervo.html">Como Funciona?</a></li>
-                            <li><a href="pages/jogos.html">Jogos</a></li>
-                            <li><a href="pages/livros.html">Livros</a></li>
-                            <li><a href="pages/modelos-didaticos.html">Modelos Didáticos</a></li>
-                            <li><a href="pages/propostas-didaticas.html">Propostas Didáticas</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown">
-                        <button class="dropdown-btn" onclick="toggleDropdown('drop-acoes', event)">Ações ▾</button>
-                        <ul class="dropdown-content" id="drop-acoes">
-                            <li><a href="pages/noite-jogos.html">Noite de Jogos</a></li>
-                            <li><a href="pages/leituras-lecc.html">Leituras LECC</a></li>
-                            <li><a href="pages/projetos-extensao.html">Projetos de Extensão</a></li>
-                        </ul>
-                    </li>
-
-                    <li><a href="pages/o-lecc.html" class="nav-link">O LECC</a></li>
-                    <li><a href="pages/equipe.html" class="nav-link">Nossa Equipe</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Conteúdo Principal: Apresentação e Carrossel 3D -->
-    <main class="container-principal">
-        <section class="apresentacao">
-            <!-- Coluna de Texto (Esquerda) -->
-            <div class="texto-apresentacao">
-                <center><h1>Laboratório de Ensino de Ciências e Cultura</h1></center>
-                <p>O Laboratório de Ensino de Ciências e Cultura (LECC) é um laboratório multidisciplinar 
-                que oferece recursos didáticos para atividades e projetos tendo como principal objetivo 
-                dar subsídios para a formação de estudantes em Ciências Biológicas e promover atividades 
-                que contribuam para discussões sobre o ensino-aprendizagem de Ciências Naturais e Biologia. 
-                Além de atividades de Ensino de Ciências também apoiamos e realizamos ações Culturais.
-            </p>
-            <p>
-                Nosso Laboratório fica localizado dentro do NECBio, no Instituto de Ciências Biológicas da Universidade de Brasília (UnB), 
-                Campus Darcy Ribeiro (DF).
-            </p>
-            </div>
-            <!-- Coluna do Carrossel 3D (Direita) -->
-            <div class="carrossel-container">
-                <img src="assets/imagens-lab/lab01.jpg" alt="Ciência 1" class="imagem-3d ativa">
-                <img src="assets/imagens-lab/livros.jpg" alt="Ciência 2" class="imagem-3d proxima">
-                <img src="assets/imagens-lab/orgaos.jpg" alt="Ciência 3" class="imagem-3d anterior">
-            </div>
-        </section>
-
-        <section class="secao-cards">
-            <div class="cards-carrossel">
-                <button class="seta-slider btn-voltar"></button>
-                <div class="cards-view">
-                    <div class="cards-container" id="slider-cards">
-                        <article class="card">
-                            <img src="assets/imagens-modelos/Dente-mHUM23.jpg" alt="Modelos">
-                            <div class="card-conteudo">
-                                <h3>Modelo - Dente</h3>
-                            </div>
-                        </article>
-
-                        <article class="card">
-                            <img src="assets/imagens-modelos/Olho-mHUM21.jpg" alt="Modelos">
-                            <div class="card-conteudo">
-                                <h3>Modelo - Olho</h3>
-                            </div>
-                        </article>
-
-                        <article class="card">
-                            <img src="assets/imagens-modelos/Ouvido-mHUM.jpg" alt="Modelos">
-                            <div class="card-conteudo">
-                                <h3>Modelo - Ouvido</h3>
-                             </div>
-                        </article>
-
-                        <article class="card">
-                            <img src="assets/imagens-modelos/Ovariano-mHUM7.jpg" alt="Modelos">
-                            <div class="card-conteudo">
-                                <h3>Modelo - Ovário</h3>
-                             </div>
-                        </article>
-
-                        <article class="card">
-                            <img src="assets/imagens-modelos/Pele -mHUM.jpg" alt="Modelos">
-                            <div class="card-conteudo">
-                                <h3>Modelo - Pele</h3>
-                             </div>
-                        </article>
-                    </div>
+        <!-- ===== Hero ===== -->
+        <section class="container-principal hero-home">
+            <div class="hero-home__texto">
+                <span class="sobretitulo">NECBio &middot; Instituto de Ciências Biológicas &middot; UnB</span>
+                <h1>Laboratório de Ensino de Ciências e Cultura</h1>
+                <p>
+                    Um laboratório multidisciplinar que oferece recursos didáticos para atividades e
+                    projetos, com o objetivo de dar subsídios à formação de estudantes em Ciências
+                    Biológicas e promover discussões sobre o ensino-aprendizagem de Ciências Naturais
+                    e Biologia. Também apoiamos e realizamos ações culturais.
+                </p>
+                <p>
+                    Estamos no NECBio, no Instituto de Ciências Biológicas da Universidade de Brasília,
+                    Campus Darcy Ribeiro (DF).
+                </p>
+                <div class="grupo-botoes">
+                    <a class="btn-primario" href="pages/acervo.html">Como emprestar materiais</a>
+                    <a class="btn-secundario" href="pages/jogos.html">Ver os jogos</a>
                 </div>
-                <button class="seta-slider btn-avancar"></button>
-            </div>
-        </section>
-        <section class="apresentacao">
-            <div style="flex: 1; text-align: left;">
-                <img src="assets/imagens-lab/horario-fun.png" alt="Equipe do LECC" class="imagem-simples">
             </div>
 
-            <div class="texto-apresentacao">
-                <h2 class="titulo-secao">O Laboratório de Ensino de Ciências e Cultura (LECC) visa:</h2>
-                <ol style="margin-left: 20px;"> <li>Estimular o uso de recursos didáticos compartilhados pelos alunos de graduação;</li> 
-                    <li>Motivar os estudantes para continuar aperfeiçoando a sua formação crítica e reflexiva;</li>
-                    <li>Incentivar, promover e difundir pesquisas e materiais educativos, na articulação entre Universidade e instituições de ensino básico;</li>
-                    <li>Reforçar a capacidade de trabalhar em equipe, resolver problemas e a capacidade de comunicação;</li>
-                    <li>Favorecer a elaboração de projetos inter e multidisciplinares a partir de diversos temas;</li>
-                    <li>Contribuir para a produção, organização e divulgação de um acervo didático relacionado às diferentes disciplinas do curso;</li>
-                    <li>Constituir um espaço capaz de integrar atividades de pesquisa, ensino, extensão e cultura.</li>
+            <div class="carrossel-container">
+                <img src="assets/imagens-lab/lab01.webp" alt="Bancada do LECC com recursos didáticos organizados"
+                     class="imagem-3d ativa" width="720" height="1280" fetchpriority="high" decoding="async">
+                <img src="assets/imagens-lab/livros.webp" alt="Estante com os livros do acervo do LECC"
+                     class="imagem-3d proxima" width="720" height="1280" loading="lazy" decoding="async">
+                <img src="assets/imagens-lab/orgaos.webp" alt="Modelos anatômicos de órgãos usados nas aulas"
+                     class="imagem-3d anterior" width="720" height="1280" loading="lazy" decoding="async">
+                <button type="button" class="btn-pausar" hidden>Pausar</button>
+            </div>
+        </section>
+
+        <!-- ===== Modelos didáticos ===== -->
+        <section class="faixa">
+            <div class="secao-cards" data-revelar>
+                <h2 class="titulo-secao titulo-secao--linha">Modelos didáticos do acervo</h2>
+                <p class="texto-apoio">
+                    Peças tridimensionais usadas em aulas de anatomia e histologia, disponíveis para
+                    empréstimo a estudantes e professores.
+                </p>
+
+                <div class="cards-carrossel">
+                    <button type="button" class="seta-slider btn-voltar" aria-label="Ver modelos anteriores">&#8249;</button>
+
+                    <div class="cards-view" tabindex="0" role="group" aria-label="Modelos didáticos">
+                        <div class="cards-container">
+                            <article class="card">
+                                <img src="assets/imagens-modelos/dente.webp" alt="Modelo didático de um dente em corte" loading="lazy" decoding="async">
+                                <div class="card-conteudo">
+                                    <h3>Modelo &ndash; Dente</h3>
+                                    <p>Estrutura dentária em corte, para o estudo de esmalte, dentina e polpa.</p>
+                                </div>
+                            </article>
+
+                            <article class="card">
+                                <img src="assets/imagens-modelos/olho.webp" alt="Modelo didático do olho humano" loading="lazy" decoding="async">
+                                <div class="card-conteudo">
+                                    <h3>Modelo &ndash; Olho</h3>
+                                    <p>Globo ocular desmontável, útil no estudo da visão e da óptica.</p>
+                                </div>
+                            </article>
+
+                            <article class="card">
+                                <img src="assets/imagens-modelos/ouvido.webp" alt="Modelo didático do ouvido humano" loading="lazy" decoding="async">
+                                <div class="card-conteudo">
+                                    <h3>Modelo &ndash; Ouvido</h3>
+                                    <p>Ouvido externo, médio e interno para abordar audição e equilíbrio.</p>
+                                </div>
+                            </article>
+
+                            <article class="card">
+                                <img src="assets/imagens-modelos/ovariano.webp" alt="Modelo didático do ciclo ovariano" loading="lazy" decoding="async">
+                                <div class="card-conteudo">
+                                    <h3>Modelo &ndash; Ciclo ovariano</h3>
+                                    <p>Representação do ciclo ovariano, usada em aulas de fisiologia.</p>
+                                </div>
+                            </article>
+
+                            <article class="card">
+                                <img src="assets/imagens-modelos/pele.webp" alt="Modelo didático das camadas da pele" loading="lazy" decoding="async">
+                                <div class="card-conteudo">
+                                    <h3>Modelo &ndash; Pele</h3>
+                                    <p>Camadas da pele em corte, com anexos cutâneos e terminações nervosas.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <button type="button" class="seta-slider btn-avancar" aria-label="Ver mais modelos">&#8250;</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Objetivos ===== -->
+        <section class="container-principal apresentacao apresentacao--invertida" data-revelar>
+            <div class="apresentacao__texto">
+                <h2 class="titulo-secao titulo-secao--linha">O que o LECC busca</h2>
+                <ol class="lista-objetivos">
+                    <li>Estimular o uso de recursos didáticos compartilhados pelos alunos de graduação.</li>
+                    <li>Motivar os estudantes a continuar aperfeiçoando sua formação crítica e reflexiva.</li>
+                    <li>Incentivar, promover e difundir pesquisas e materiais educativos, articulando universidade e ensino básico.</li>
+                    <li>Reforçar a capacidade de trabalhar em equipe, resolver problemas e se comunicar.</li>
+                    <li>Favorecer a elaboração de projetos inter e multidisciplinares a partir de diversos temas.</li>
+                    <li>Contribuir para a produção, organização e divulgação de um acervo didático das disciplinas do curso.</li>
+                    <li>Constituir um espaço capaz de integrar pesquisa, ensino, extensão e cultura.</li>
                 </ol>
             </div>
+
+            <div class="apresentacao__midia">
+                <img src="assets/imagens-lab/horario-fun.webp"
+                     alt="Quadro com os dias e horários de funcionamento do LECC e a escala de monitores"
+                     class="imagem-simples" width="1080" height="1440" loading="lazy" decoding="async">
+            </div>
         </section>
+
     </main>
 
-    <footer class="rodape-principal">
-        <div class="rodape-container">      
-            <div class="rodape-icones">
-                <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=lecunb.necbio@gmail.com" aria-label="E-mail" class="icone-link">
-                    <img src="assets/icons/email-icon.png" alt="E-mail do LECC">
-                </a>
+    <div id="site-footer"></div>
 
-                <a href="https://necbio.unb.br/" aria-label="Localização" class="icone-link">
-                    <img src="assets/icons/icon-ecbio-unb.png" alt="Localização do LECC">
-                </a>
-
-                <a href="https://www.instagram.com/p/DJuRSggRWqI/" aria-label="Instagram" class="icone-link">
-                    <img src="assets/icons/insta-icon.png" alt="Instagram do LECC">
-                </a>
-            </div>
-
-            <div class="rodape-texto">
-                <p class="sep-line"></p>
-                <p><strong>Laboratório de Ensino de Ciências e Cultura (LECC)</strong></p>
-                <p>NECBio - Instituto de Ciências Biológicas, Universidade de Brasília (UnB), Campus Darcy Ribeiro (DF)</p>
-                <br>
-                <p>por Beatriz Flores | Amanda Lima | Artur Stange</p>
-                <p class="sep-line">© 2026 LECC - UnB. Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
     <script src="js/global.js"></script>
     <script src="js/animacoes.js"></script>
 </body>
+
 </html>

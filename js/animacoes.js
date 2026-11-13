@@ -1,66 +1,224 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const imagens = document.querySelectorAll('.imagem-3d');
-    const classes = ['ativa', 'proxima', 'anterior'];
-    let posicoes = [0, 1, 2]; // Índices que controlam a ordem das classes
+/* =========================================================
+   LECC - UnB  |  animacoes.js
+   Carrossel 3D da home e os sliders horizontais de cards.
 
-    // Altera as imagens a cada 3.5 segundos
-    setInterval(() => {
-        // Rotaciona o array de posições (o último vai para o começo)
-        posicoes.unshift(posicoes.pop());
+   Tudo e inicializado apenas quando os elementos existem na
+   pagina, e nada se move quando o visitante pediu menos
+   animacao no sistema (prefers-reduced-motion).
+   ========================================================= */
+(function () {
+    'use strict';
 
-        // Aplica a nova classe correta para cada imagem limpando as antigas
-        imagens.forEach((img, index) => {
-            img.classList.remove('ativa', 'proxima', 'anterior');
-            img.classList.add(classes[posicoes[index]]);
-        });
-    }, 3500);
-});
+    var menosMovimento = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-const carrosseis = document.querySelectorAll('.cards-carrossel');
-
-    carrosseis.forEach(carrossel => {
-        // Dentro de CADA carrossel, ele busca a trilha e os botões específicos dele
-        const trackCards = carrossel.querySelector('.cards-container');
-        const btnAvancar = carrossel.querySelector('.btn-avancar');
-        const btnVoltar = carrossel.querySelector('.btn-voltar');
-        
-        // Se a página atual não tiver esse carrossel, ele ignora para não dar erro
-        if (!trackCards || !btnAvancar || !btnVoltar) return;
-
-        // Cada carrossel terá seu próprio índice (posição)
-        let indexCardAtual = 0;
-
-        function atualizarSliderCards() {
-            const cards = trackCards.querySelectorAll('.card');
-            if (cards.length === 0) return;
-
-            const larguraCard = cards[0].offsetWidth;
-            const gap = parseFloat(window.getComputedStyle(trackCards).gap) || 0;
-            const movimento = larguraCard + gap;
-            
-            trackCards.style.transform = `translateX(-${indexCardAtual * movimento}px)`;
+    /* =====================================================
+       Carrossel 3D
+       ===================================================== */
+    function iniciarCarrossel3d() {
+        var container = document.querySelector('.carrossel-container');
+        if (!container) {
+            return;
         }
 
-        btnAvancar.addEventListener('click', () => {
-            const cards = trackCards.querySelectorAll('.card');
-            const cardsVisiveis = Math.round(trackCards.parentElement.offsetWidth / cards[0].offsetWidth);
-            const maxCliques = cards.length - cardsVisiveis;
+        var imagens = Array.prototype.slice.call(container.querySelectorAll('.imagem-3d'));
+        if (imagens.length < 2) {
+            return;
+        }
 
-            if (indexCardAtual < maxCliques) {
-                indexCardAtual++;
-                atualizarSliderCards();
+        var classes = ['ativa', 'proxima', 'anterior'];
+        var posicoes = imagens.map(function (_, i) {
+            return i % classes.length;
+        });
+        var INTERVALO = 4000;
+        var timer = null;
+        var pausadoPeloUsuario = false;
+        var btnPausar = container.querySelector('.btn-pausar');
+
+        function girar() {
+            posicoes.unshift(posicoes.pop());
+            imagens.forEach(function (img, i) {
+                img.classList.remove('ativa', 'proxima', 'anterior');
+                img.classList.add(classes[posicoes[i]]);
+            });
+        }
+
+        function rodando() {
+            return timer !== null;
+        }
+
+        function iniciar() {
+            if (!rodando() && !pausadoPeloUsuario && !menosMovimento.matches) {
+                timer = window.setInterval(girar, INTERVALO);
+            }
+            atualizarBotao();
+        }
+
+        function parar() {
+            if (timer !== null) {
+                window.clearInterval(timer);
+                timer = null;
+            }
+            atualizarBotao();
+        }
+
+        function atualizarBotao() {
+            if (!btnPausar) {
+                return;
+            }
+            var ativo = rodando();
+            btnPausar.textContent = ativo ? 'Pausar' : 'Reproduzir';
+            btnPausar.setAttribute(
+                'aria-label',
+                ativo ? 'Pausar a troca automática de imagens' : 'Retomar a troca automática de imagens'
+            );
+        }
+
+        if (btnPausar) {
+            btnPausar.hidden = false;
+            btnPausar.addEventListener('click', function () {
+                pausadoPeloUsuario = rodando();
+                if (pausadoPeloUsuario) {
+                    parar();
+                } else {
+                    iniciar();
+                }
+            });
+        }
+
+        /* Pausa enquanto o ponteiro ou o foco estiverem sobre o carrossel */
+        ['mouseenter', 'focusin'].forEach(function (evt) {
+            container.addEventListener(evt, parar);
+        });
+        ['mouseleave', 'focusout'].forEach(function (evt) {
+            container.addEventListener(evt, function () {
+                if (!pausadoPeloUsuario) {
+                    iniciar();
+                }
+            });
+        });
+
+        /* Nao gasta processamento com a aba em segundo plano */
+        document.addEventListener('visibilitychange', function () {
+            if (document.hidden) {
+                parar();
+            } else if (!pausadoPeloUsuario) {
+                iniciar();
             }
         });
 
-        btnVoltar.addEventListener('click', () => {
-            if (indexCardAtual > 0) {
-                indexCardAtual--;
-                atualizarSliderCards();
+        if (typeof menosMovimento.addEventListener === 'function') {
+            menosMovimento.addEventListener('change', function (evento) {
+                if (evento.matches) {
+                    parar();
+                } else {
+                    iniciar();
+                }
+            });
+        }
+
+        iniciar();
+    }
+
+    /* =====================================================
+       Sliders de cards
+
+       A rolagem e nativa (CSS scroll-snap), entao o gesto de
+       arrastar no celular, a roda do mouse e o teclado ja
+       funcionam. Os botoes apenas deslocam a area visivel.
+       ===================================================== */
+    function iniciarSliders() {
+        var carrosseis = Array.prototype.slice.call(
+            document.querySelectorAll('.cards-carrossel')
+        );
+
+        carrosseis.forEach(function (carrossel) {
+            var area = carrossel.querySelector('.cards-view');
+            var btnAvancar = carrossel.querySelector('.btn-avancar');
+            var btnVoltar = carrossel.querySelector('.btn-voltar');
+            if (!area) {
+                return;
             }
+
+            function passo() {
+                var card = area.querySelector('.card');
+                if (!card) {
+                    return area.clientWidth;
+                }
+                var estilo = window.getComputedStyle(card.parentElement);
+                var gap = parseFloat(estilo.columnGap || estilo.gap) || 0;
+                return card.getBoundingClientRect().width + gap;
+            }
+
+            function atualizarBotoes() {
+                var fim = area.scrollWidth - area.clientWidth - 1;
+                if (btnVoltar) {
+                    btnVoltar.disabled = area.scrollLeft <= 0;
+                }
+                if (btnAvancar) {
+                    btnAvancar.disabled = area.scrollLeft >= fim;
+                }
+            }
+
+            function deslocar(direcao) {
+                area.scrollBy({
+                    left: direcao * passo(),
+                    behavior: menosMovimento.matches ? 'auto' : 'smooth'
+                });
+            }
+
+            if (btnAvancar) {
+                btnAvancar.addEventListener('click', function () {
+                    deslocar(1);
+                });
+            }
+            if (btnVoltar) {
+                btnVoltar.addEventListener('click', function () {
+                    deslocar(-1);
+                });
+            }
+
+            area.addEventListener('scroll', atualizarBotoes, { passive: true });
+            window.addEventListener('resize', atualizarBotoes);
+            atualizarBotoes();
+        });
+    }
+
+    /* =====================================================
+       Entrada suave das secoes
+       ===================================================== */
+    function iniciarRevelacao() {
+        if (menosMovimento.matches || !('IntersectionObserver' in window)) {
+            return;
+        }
+
+        var alvos = Array.prototype.slice.call(document.querySelectorAll('[data-revelar]'));
+        if (!alvos.length) {
+            return;
+        }
+
+        alvos.forEach(function (alvo) {
+            alvo.style.opacity = '0';
+            alvo.style.transform = 'translateY(16px)';
+            alvo.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         });
 
-        window.addEventListener('resize', () => {
-            indexCardAtual = 0;
-            atualizarSliderCards();
+        var observador = new IntersectionObserver(function (entradas) {
+            entradas.forEach(function (entrada) {
+                if (!entrada.isIntersecting) {
+                    return;
+                }
+                entrada.target.style.opacity = '1';
+                entrada.target.style.transform = 'none';
+                observador.unobserve(entrada.target);
+            });
+        }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+
+        alvos.forEach(function (alvo) {
+            observador.observe(alvo);
         });
-    });
+    }
+
+    iniciarCarrossel3d();
+    iniciarSliders();
+    iniciarRevelacao();
+})();

@@ -48,8 +48,23 @@ def converter(origem: pathlib.Path, dry_run: bool) -> tuple[int, int]:
         return antes, antes
 
     with Image.open(origem) as img:
-        tem_alpha = img.mode in ("RGBA", "LA", "P") and "transparency" in img.info
-        img = img.convert("RGBA" if tem_alpha else "RGB")
+        # Atencao: img.info["transparency"] so existe em PNG de paleta.
+        # Imagens RGBA/LA carregam o alfa no proprio modo, entao checar
+        # apenas o info descartaria a transparencia (os icones viravam
+        # um retangulo preto sobre o header escuro).
+        tem_alpha = (
+            img.mode in ("RGBA", "LA")
+            or (img.mode == "P" and "transparency" in img.info)
+        )
+
+        if tem_alpha:
+            img = img.convert("RGBA")
+            # Se o canal alfa for totalmente opaco ele so ocupa espaco.
+            if img.getchannel("A").getextrema()[0] == 255:
+                img = img.convert("RGB")
+                tem_alpha = False
+        else:
+            img = img.convert("RGB")
 
         maxl = largura_maxima(origem)
         if img.width > maxl:
