@@ -19,7 +19,10 @@
     'use strict';
 
     var EMAIL = 'lecunb.necbio@gmail.com';
-    var INSTAGRAM = 'https://www.instagram.com/lecc.unb/';
+    /* TODO: trocar pela URL do PERFIL do LECC no Instagram. Este link
+       aponta para uma publicacao especifica (era o que havia no site
+       antigo), nao para o perfil. */
+    var INSTAGRAM = 'https://www.instagram.com/p/DJuRSggRWqI/';
     var NECBIO = 'https://necbio.unb.br/';
 
     /* Estrutura do menu. "href" e sempre relativo a raiz do site. */
