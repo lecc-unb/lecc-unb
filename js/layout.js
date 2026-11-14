@@ -193,7 +193,7 @@
 
             '<div class="rodape-base">' +
                 '<span>&copy; ' + new Date().getFullYear() + ' LECC &ndash; UnB. Todos os direitos reservados.</span>' +
-                '<span>Site por Beatriz Flores, Amanda Lima e Artur Stange</span>' +
+                '<span>Desenvolvido por: Pedro Garcia, Artur Stange, Beatriz Flores, Amanda Lima</span>' +
             '</div>' +
         '</footer>';
     }

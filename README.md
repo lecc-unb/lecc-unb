@@ -9,6 +9,10 @@ Darcy Ribeiro (DF).
 Site estático, sem framework e sem etapa de build: HTML, CSS e JavaScript puros,
 hospedado no GitHub Pages.
 
+Este arquivo é o guia de uso. A documentação de arquitetura — camadas,
+contratos entre os arquivos, decisões e seus motivos — está em
+[`docs/`](docs/README.md).
+
 ---
 
 ## Como rodar localmente
@@ -39,6 +43,7 @@ Depois acesse <http://localhost:8000>.
 │   ├── layout.js           Monta o header e o rodapé  ← fonte única do menu
 │   ├── global.js           Menu mobile, dropdowns e as buscas
 │   └── animacoes.js        Carrossel 3D e sliders de cards
+├── docs/                   Documentação de arquitetura
 ├── pages/                  Demais páginas
 └── assets/
     ├── icons/              Logo e ícones
@@ -170,6 +175,7 @@ Antes de publicar, vale conferir:
 ## Créditos
 
 Site por Beatriz Flores, Amanda Lima e Artur Stange.
+Desenvolvimento por Pedro Garcia.
 Texto de idealização do laboratório por Mariana Zancul.
 
 Licença: veja [LICENSE](LICENSE).

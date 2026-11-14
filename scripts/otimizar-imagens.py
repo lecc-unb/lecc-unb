@@ -16,7 +16,7 @@ import argparse
 import pathlib
 import sys
 
-from PIL import Image
+from PIL import Image, ImageOps
 
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 ASSETS = RAIZ / "assets"
@@ -48,6 +48,11 @@ def converter(origem: pathlib.Path, dry_run: bool) -> tuple[int, int]:
         return antes, antes
 
     with Image.open(origem) as img:
+        # Fotos de celular guardam a rotacao no EXIF (orientacao 6, 8...).
+        # O WebP gerado abaixo nao carrega esse dado, entao a rotacao precisa
+        # ser aplicada aos pixels antes, senao a foto sai deitada.
+        img = ImageOps.exif_transpose(img)
+
         # Atencao: img.info["transparency"] so existe em PNG de paleta.
         # Imagens RGBA/LA carregam o alfa no proprio modo, entao checar
         # apenas o info descartaria a transparencia (os icones viravam
